@@ -1,3 +1,5 @@
+[![C Project CI](https://github.com/AnanthuMoolayil/Memory_Allocator_C_project/actions/workflows/ci.yml/badge.svg)](https://github.com/AnanthuMoolayil/Memory_Allocator_C_project/actions/workflows/ci.yml)
+
 # Memory_Allocator_C_project
 
 A First-fit Dynamic Memory Allocator containing the following:
