@@ -12,6 +12,7 @@ A First-fit Dynamic Memory Allocator containing the following:
 7. Block splitting
 8. Coalescing
 9. Fragmentation awareness
+10. Verified leak-free via Address Sanitiser
 
 ## Memory layout
 ### General
