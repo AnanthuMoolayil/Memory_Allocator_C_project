@@ -53,3 +53,14 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+# VSCode / VSCodium
+.vscode/
+.clangd
+
+# Build folders
+build/
+
+# Temporary files
+*.tmp
+*.log
