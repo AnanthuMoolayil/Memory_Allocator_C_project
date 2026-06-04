@@ -13,6 +13,68 @@ A First-fit Dynamic Memory Allocator containing the following:
 8. Coalescing
 9. Fragmentation awareness
 
+## Memory layout
+### General
+```bash
+Heap Memory
+
++--------+----------+--------+----------+--------+----------+
+|Header A| Data A   |Header B| Data B   |Header C| Data C   |
++--------+----------+--------+----------+--------+----------+
+
+Each block consists of:
+
++----------------------+----------------------+
+| Header_block         | User Data            |
++----------------------+----------------------+
+^                      ^
+|                      |
+Header Address         User Pointer
+(Block Start)          (Returned by allocate())
+
+
+Header_block
+
++------+-------+------+
+| used | size  | next |
++------+-------+------+
+
+used : Allocation status (0 = free, 1 = allocated)
+size : Size of the user data region in bytes
+next : Pointer to the next block in the heap
+```
+### Splitting
+```bash
+Before allocate(50)
+
++--------+-----------------------------------------+
+| Header |          224 Bytes Free                 |
++--------+-----------------------------------------+
+
+
+After allocate(50)
+
++--------+----------+--------+---------------------+
+| Header | 50 Used  | Header |    150 Bytes Free   |
++--------+----------+--------+---------------------+
+```
+### Coalescing
+```bash
+Before Coalescing
+
++--------+----------+--------+----------+
+| Header | 100 Free | Header | 100 Free |
++--------+----------+--------+----------+
+
+
+After Coalescing
+
++--------+------------------------------+
+| Header |       224 Bytes Free         |
++--------+------------------------------+
+
+```
+
 ## Output
 Here is a sample output:<br>
 <img width="518" height="1012" alt="6_sample_test_case" src="https://github.com/user-attachments/assets/6c26ad92-772b-46cd-9e83-3f2453584ae3" /><br><br>
