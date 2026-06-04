@@ -16,3 +16,6 @@ jobs:
 
     - name: Compile project
       run: gcc 1_source_files/*.c -o mem
+
+    - name: Run program
+      run: ./mem
