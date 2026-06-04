@@ -1,4 +1,4 @@
-
+#include <stdint.h>
 #include "0_header.h"
 
 extern Storage S;

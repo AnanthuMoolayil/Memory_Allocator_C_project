@@ -1,6 +1,7 @@
 //Helper functions to showcase allocator functioning and robustness.
 
 #include <stdio.h>
+#include <stdint.h>
 #include "0_header.h"
 
 extern Storage S;
