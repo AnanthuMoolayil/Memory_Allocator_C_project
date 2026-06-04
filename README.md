@@ -11,6 +11,13 @@ A First-fit Dynamic Memory Allocator containing the following:
 8. Coalescing
 9. Fragmentation awareness
 
+## Output
+Here is a sample output:<br>
+<img width="518" height="1012" alt="6_sample_test_case" src="https://github.com/user-attachments/assets/6c26ad92-772b-46cd-9e83-3f2453584ae3" /><br><br>
+Here is a sample output showcasing error handling:<br>
+<img width="518" height="660" alt="2_double_free" src="https://github.com/user-attachments/assets/623dbdb4-f5d9-415c-b091-f03f6433aea0" /><br>
+*More test case samples are present in '2_output_images' folder*
+
 ## Concepts used:
 ### A. Heap Management
 
