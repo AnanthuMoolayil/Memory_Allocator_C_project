@@ -15,7 +15,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Compile project
-      run: gcc 1_source_files/*.c -o mem
+      run: make
 
     - name: Run program
       run: ./mem
